@@ -37,7 +37,7 @@ Note :
 vagrant.exe ssh master
 sudo su - 
 git clone To https://github.com/amitvashisttech/kubernetes-VMware-13-Dec-2021.git
-cd kubernetes-VMware-13-Dec-2021/02-Kubernetes/00-Setup
+cd kubernetes-VMware-13-Dec-2021/02-k8s/00-Setup
 sh install-k8s-master-node.sh
 
 ---
