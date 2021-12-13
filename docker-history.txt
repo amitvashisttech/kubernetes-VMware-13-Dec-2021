@@ -1,0 +1,75 @@
+root@master:~/kubernetes-VMware-13-Dec-2021/01-Docker# cat 1.txt
+    1  ls
+    2  cat /etc/*-release
+    3  ip addr
+    4  hostname
+    5  hostname -f
+    6  hostname -i
+    7  cat /etc/hosts
+    8  ls
+    9  exit
+   10  git clone https://github.com/amitvashisttech/kubernetes-VMware-13-Dec-2021.git
+   11  ls
+   12  cd kubernetes-VMware-13-Dec-2021/
+   13  ls
+   14  git pull
+   15  ls
+   16  cd 00-Vagrant-Setup/
+   17  ls
+   18  cd ..
+   19  ls
+   20  cd 01-Docker/
+   21  ls
+   22  cd 00-Setup/
+   23  ls
+   24  s
+   25  ls
+   26  ./install-docker.sh
+   27  vim install-docker.sh
+   28  ls
+   29  rm 1
+   30  ls
+   31  cd ..
+   32  docker version
+   33  docker run ubuntu:16.04 echo "Welcome to the world of Docker"
+   34  docker run ubuntu:16.04 echo "Welcome to the world of Docker - Test 2"
+   35  docker images
+   36  docker pull busybox
+   37  docker images
+   38  docker run busybox echo "Hello World"
+   39  docker ps
+   40  docker container ls
+   41  docker container ls -a
+   42  docker run -it --name test-cont-1 ubuntu:16.04 bash
+   43  docker ps
+   44  docker ps -a
+   45  docker ps
+   46  docker ps -a
+   47  docker start test-cont-1
+   48  docker ps
+   49  docker ps -a
+   50  docker attach test-cont-1
+   51  ls
+   52* docker ps -a
+   53  docker start test-cont-1
+   54  docker ps
+   55  docker kill test-cont-1
+   56  docker ps -a
+   57  docker rm test-cont-1
+   58  docker ps -a
+   59  docker ps -aq
+   60  docker rm $(docker ps -aq )
+   61  docker ps -a
+   62  docker images
+   63  docker image -q
+   64  docker images -q
+   65  docker rmi $(docker images -q)
+   66  ls
+   67  docker images
+   68  docker ps -a
+   69  history
+   70  history > 1.txt
+root@master:~/kubernetes-VMware-13-Dec-2021/01-Docker#
+
+
+
