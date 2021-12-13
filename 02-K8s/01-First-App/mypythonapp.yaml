@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: mypython
+  name: mypython
+spec:
+  containers:
+  - image: amitvashist7/mypython-web-app-ericsson-22-nov-2021:v1
+    name: mypython
+    ports:
+    - containerPort: 8081
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
