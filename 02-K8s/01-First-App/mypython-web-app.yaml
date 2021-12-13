@@ -3,12 +3,12 @@ kind: Pod
 metadata:
   creationTimestamp: null
   labels:
-    run: mypython
-  name: mypython
+    run: mywebapp
+  name: mywebapp
 spec:
   containers:
-  - image: amitvashist7/mypython-web-app-ericsson-22-nov-2021:v1
-    name: mypython
+  - image: amitvashist7/mypython-web-app:v1
+    name: mywebapp
     ports:
     - containerPort: 8081
     resources: {}
