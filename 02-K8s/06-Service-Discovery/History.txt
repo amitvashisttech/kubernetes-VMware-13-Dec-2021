@@ -1,0 +1,34 @@
+```
+ 972  cd 06-Service-Discovery/
+  973  ls
+  974  cat secrets.yaml
+  975  vim database.yaml
+  976  ls
+  977  kubectl  get secrets
+  978  kubectl  apply -f secrets.yaml
+  979  kubectl  get secrets
+  980  kubectl  describe  secrets helloworld-secrets
+  981  ls
+  982  kubectl  apply -f database.yaml
+  983  kubectl  get pods
+  984  kubectl  delete -f ../05-DNS/
+  985  kubectl  get pods
+  986  kubectl  api-resources
+  987  kubectl get pods
+  988  kubectl  delete -f ../04-Replication-Cantroller/
+  989  ls
+  990  kubectl  get pods
+  991  kubectl describe pod database
+  992  kubectl exec -it database -- bash
+  993  ls
+  994  cat database-service.yml
+  995  kubectl  apply -f database-service.yml
+  996  kubectl  get svc
+  997  kubectl  apply -f ../05-DNS/busybox.yaml
+  998  kubectl  exec -it busybox -- nslookup database-service
+  999  ls
+ 1000  vim helloworld-app-deployment.yml
+ 1001  kubectl  exec -it busybox -- mysql -u root -p
+ 1002  kubectl  exec -it database -- mysql -u root -p
+
+```
