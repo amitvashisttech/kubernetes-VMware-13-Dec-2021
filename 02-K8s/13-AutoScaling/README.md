@@ -12,3 +12,11 @@
  1404  kubectl get hpa
  1405  kubectl top pod
 ```
+
+
+```
+# Log Gen Command:
+
+while true; do wget -q -O- 172.31.0.101:31001; done
+
+```
