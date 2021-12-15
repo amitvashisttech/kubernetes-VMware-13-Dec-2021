@@ -26,3 +26,46 @@ kubectl config get-contexts
 kubectl get pods
 kubectl get pods -n kube-system
 ```
+
+
+# Create a ClutserRole Binding with Cluster Admin role for normal user: amit
+
+
+## View Cluster & Binding via kubernetes-admin context
+```
+kubectl config get-contexts
+kubectl config use-context kubernetes-admin@kubernetes
+kubectl config get-contexts
+kubectl get pods -n kube-system
+
+kubectl get clusterrole
+kubectl describe clusterrole cluster-admin
+kubectl get clusterrolebinding
+kubectl describe clusterrolebinding cluster-admin
+```
+
+## Create a Clusterole binding with existing cluster admin role
+```
+kubectl create clusterrolebinding admin-user-amit --clusterrole=cluster-admin --user=amit  --dry-run
+kubectl create clusterrolebinding admin-user-amit --clusterrole=cluster-admin --user=amit  --dry-run -o yaml > amit-cluster-rolebinding.yaml
+cat amit-cluster-rolebinding.yaml
+
+kubectl create -f amit-cluster-rolebinding.yaml
+kubectl get clusterrolebinding
+kubectl describe clusterrolebinding admin-user-amit
+```
+
+## Change the conetext & validate the role permissions
+```
+kubectl config get-contexts
+kubectl config use-context amit@kubernetes
+kubectl get pods
+kubectl get pods --all-namespaces
+```
+```
+kubectl auth can-i delete pod -n kube-system
+kubectl auth can-i create pod -n kube-system
+kubectl auth can-i create pod
+
+```
+
