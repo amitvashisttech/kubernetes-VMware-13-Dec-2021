@@ -49,7 +49,7 @@
  1901  curl 172.31.0.101:30854 -H 'Host: helloworld-v2.example.com'
  1902  curl 172.31.0.101:30854 -H 'Host: helloworld-v1.example.com'
  1903  curl 172.31.0.101:30854 -H 'Host: helloworld-v2.example.com'
- 1904  cat ingress-rules.yaml
+ 1904  curl 172.31.0.101:32749/info -H 'Host: python'
  1905  ls
  1906  cd ..
  1907  ls
@@ -59,3 +59,4 @@
  1911  history
 
 ```
+
